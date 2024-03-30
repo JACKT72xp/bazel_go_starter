@@ -8,7 +8,8 @@ import (
 
 func InitDB() *sql.DB {
     // Configura la cadena de conexión a la base de datos
-    db, err := sql.Open("mysql", "root:Maniac321.@tcp(192.168.36.90:3306)/bifrost_base")
+    // db, err := sql.Open("mysql", "root:xxx.@tcp(1x.x.x.x:3306)/bifrost_base")
+    db, err := sql.Open("mysql", "__here_database_connection_string__")
     if err != nil {
         panic(err.Error())
     }
