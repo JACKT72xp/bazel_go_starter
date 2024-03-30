@@ -1,0 +1,12 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "database_lib",
+    srcs = ["database.go"],  # Asegúrate de que database.go esté en este subdirectorio
+    importpath = "example/bazel-go-gin-starter/database",
+    visibility = ["//visibility:public"],
+    deps = [
+        # Agrega aquí cualquier dependencia necesaria, por ejemplo, la librería de MySQL
+        "@com_github_go_sql_driver_mysql//:go_default_library",
+    ],
+)

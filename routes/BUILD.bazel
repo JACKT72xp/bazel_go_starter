@@ -1,0 +1,12 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "routes_lib",
+    srcs = ["routes.go"],  # Asegúrate de que routes.go esté en este subdirectorio
+    importpath = "example/bazel-go-gin-starter/routes",
+    visibility = ["//visibility:public"],
+    deps = [
+        # Agrega aquí las dependencias necesarias, por ejemplo, la librería de Gin
+        "@com_github_gin_gonic_gin//:go_default_library",
+    ],
+)
