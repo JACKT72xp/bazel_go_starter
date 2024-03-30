@@ -1,0 +1,1 @@
+# bazel_go_starter
